@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
+@theme {
+  --font-sans: 'Rubik', 'Heebo', system-ui, sans-serif;
+  --color-royal-50: #f5f3ff;
+  --color-royal-100: #ede9fe;
+  --color-royal-200: #ddd6fe;
+  --color-royal-300: #c4b5fd;
+  --color-royal-500: #8b5cf6;
+  --color-royal-600: #7c3aed;
+  --color-royal-700: #6d28d9;
+  --color-royal-800: #5b21b6;
+  --color-royal-900: #4c1d95;
+  --color-royal-950: #2e1065;
+  --color-gold-300: #ffd84d;
+  --color-gold-400: #f5b301;
+  --color-gold-600: #b45309;
+  --color-fuchsia-royal: #db2777;
+  --color-cream: #fff8ef;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-royal-950);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* numbers, ratios and formulas inside Hebrew sentences */
+.math-run {
+  unicode-bidi: isolate;
+  direction: ltr;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.katex {
+  font-size: 1.25em;
+}
+
+.btn-3d {
+  box-shadow: 0 5px 0 0 rgb(0 0 0 / 0.18);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.btn-3d:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 0.18);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.shine {
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.65) 50%, transparent 70%);
+  background-size: 250% 100%;
+  animation: shine 2.6s ease-in-out infinite;
+}
+@keyframes shine {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+}
