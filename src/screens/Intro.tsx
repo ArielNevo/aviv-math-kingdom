@@ -73,7 +73,7 @@ export function Intro({ topic, lessonId, onDone }: { topic: MainTopic; lessonId:
           <div className="w-full shrink-0 snap-center px-4 pb-4">
             <div className="flex h-full flex-col gap-3 rounded-3xl border-2 border-royal-100 bg-white p-5">
               <h2 className="text-2xl font-black text-royal-900">🎬 סרטונים קצרים</h2>
-              <p className="text-royal-800">רוצה לראות את זה בתנועה? אבא מסביר בפחות מדקה:</p>
+              <p className="text-royal-800">רוצה לראות את זה בתנועה? אבא ופיתי מסבירים בערך בדקה:</p>
               {videos.map((v) => (
                 <VideoCard key={v.id} v={v} />
               ))}

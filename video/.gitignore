@@ -1,0 +1,6 @@
+node_modules
+out
+vo/
+public/vo/
+public/audio/
+.cache
